@@ -1,0 +1,51 @@
+{
+  "name": "omni",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "prettier": "prettier-eslint --write \"**/*.{ts,tsx,js}\""
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-hot-loader": "4.12.6"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.4",
+    "@babel/plugin-proposal-class-properties": "7.5.0",
+    "@babel/preset-env": "7.5.4",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/html-webpack-plugin": "3.2.1",
+    "@types/node": "12.6.3",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/webpack": "4.4.35",
+    "babel-loader": "8.0.6",
+    "cli": "1.0.1",
+    "eslint": "6.0.1",
+    "eslint-config-ericbiewener-typescript": "4.0.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "3.0.0",
+    "lint-staged": "9.2.0",
+    "prettier-eslint-cli": "5.0.0",
+    "ts-node": "8.3.0",
+    "webpack": "4.35.3",
+    "webpack-cli": "3.3.6",
+    "webpack-dev-server": "3.7.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": [
+      "prettier-eslint --prettier-last --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
